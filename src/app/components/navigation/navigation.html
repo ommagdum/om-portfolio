@@ -1,0 +1,71 @@
+<nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200/50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a 
+                (click)="scrollToSection('about')"
+                class="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent cursor-pointer"
+            >
+                Om Magdum
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                @for (item of navItems; track item.id) {
+                    <a (click)="scrollToSection(item.id)"
+                        class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium cursor-pointer"
+                    >
+                        {{ item.text }}
+                    </a>
+                }
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button 
+                    (click)="toggleMenu()"
+                    type="button" 
+                    class="text-gray-700 hover:text-blue-600 focus:outline-none"
+                    aria-label="Toggle menu"
+                >
+                    <svg 
+                        class="w-6 h-6" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                        [class.hidden]="isMenuOpen"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg 
+                        class="w-6 h-6" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                        [class.hidden]="!isMenuOpen"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div 
+            class="md:hidden transition-all duration-300 ease-in-out overflow-hidden"
+            [class.max-h-0]="!isMenuOpen"
+            [class.max-h-96]="isMenuOpen"
+        >
+            <div class="pt-4 pb-2 space-y-2">
+                @for (item of navItems; track item.id) {
+                    <a 
+                        (click)="scrollToSection(item.id)"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                    >
+                        {{ item.text }}
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</nav>
