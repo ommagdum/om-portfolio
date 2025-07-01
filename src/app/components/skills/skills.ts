@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SkillService } from '../../services/skill-service';
 
 @Component({
   selector: 'app-skills',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './skills.css'
 })
 export class Skills {
-
+  private readonly skillService = inject(SkillService);
+  skills = this.skillService.getSkills();
 }

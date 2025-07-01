@@ -1,1 +1,28 @@
-<p>skills works!</p>
+<section id="skills" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
+                Technical Skills
+            </span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @for (category of skills; track category.name) {
+            <div class="border-0 shadow-lg bg-white/80 backdrop-blur hover:shadow-xl transition-all duration-300 rounded-lg overflow-hidden">
+                <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 capitalize">
+                    {{ category.name }}
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    @for (skill of category.skills; track skill) {
+                    <span class="px-3 py-1.5 text-sm font-medium bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 text-blue-800 rounded-full hover:bg-blue-100 transition-colors">
+                        {{ skill }}
+                    </span>
+                    }
+                </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

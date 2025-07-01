@@ -1,1 +1,47 @@
-<p>education works!</p>
+<section id="education" class="py-16 px-6 bg-white/50">
+    <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">
+        <span class="bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent">
+        Education
+        </span>
+    </h2>
+    <div class="max-w-2xl mx-auto">
+        @for (edu of education; track edu.institution) {
+        <div class="border-0 shadow-lg bg-white/80 backdrop-blur mb-8 rounded-lg overflow-hidden">
+            <div class="p-6">
+            <div class="flex items-center mb-2">
+                <!-- Graduation Cap Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2 text-blue-600">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 1 9-1v-5"></path>
+                </svg>
+                <h3 class="text-xl font-bold text-gray-900">{{ edu.degree }}</h3>
+            </div>
+            <p class="text-lg font-medium text-blue-600 mb-2">{{ edu.field }}</p>
+            <p class="text-gray-700 font-medium mb-3">{{ edu.institution }}</p>
+            <div class="flex flex-wrap items-center justify-between text-sm text-gray-500">
+                <div class="flex items-center">
+                <!-- Map Pin Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-1">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>{{ edu.location }}</span>
+                </div>
+                <div class="flex items-center">
+                <!-- Calendar Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-1">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>{{ edu.duration }}</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        }
+    </div>
+    </div>
+</section>
