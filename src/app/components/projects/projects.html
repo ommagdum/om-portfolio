@@ -8,18 +8,10 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             @for (project of projects; track project.title) {
-                <div class="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-white/80 backdrop-blur-md rounded-lg ">
-                    <div class="p-6">
+                <div class="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg bg-white/80 backdrop-blur-md rounded-lg flex flex-col h-full">
+                    <div class="p-6 flex-1 flex flex-col">
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{{ project.title }}</h3>
-                            <a [href]="project.repository"
-                            class="h-9 w-9 rounded-md flex items-center justify-center hover:bg-gray-100">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                <polyline points="15 3h6v6"></polyline>
-                                <line x1="10" y1="14" x2="21" y2="3"></line>
-                            </svg>
-                            </a>
                         </div>
 
                         <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -32,9 +24,9 @@
                             <span>{{project.duration}}</span>
                         </div>
 
-                        <p class="text-gray-600 mb-4 leading-relaxed">{{project.description}}</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed flex-1">{{project.description}}</p>
 
-                        <div class="flex flex-wrap gap-2">
+                        <div class="flex flex-wrap gap-2 mb-4">
                             @for (tech of project.tech.slice(0, 4); track tech) {
                                 <span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-700 rounded-full hover:bg-blue-100 transition-colors">
                                     {{tech}}
@@ -46,10 +38,31 @@
                                 </span>
                             }
                         </div>
+
+                        <div class="flex gap-2 mt-auto pt-2">
+                            <a [href]="project.liveDemo" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="flex-1 flex items-center justify-center px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                Live Demo
+                            </a>
+                            <a [href]="project.repository" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="flex-1 flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             }
-
         </div>
     </div>
 </section>

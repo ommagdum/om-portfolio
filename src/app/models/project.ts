@@ -4,4 +4,5 @@ export interface Project {
     duration: string;
     description: string;
     repository: string;
+    liveDemo: string;
 }
