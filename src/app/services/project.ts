@@ -9,28 +9,37 @@ export class ProjectService {
 
   private readonly projects: Project[] = [
     {
+      title: 'MeetingMinutes AI | Mega Project',
+      tech: ['Spring Boot', 'React', 'Flask', 'MongoDB', 'Whisper', 'Mistral 7B', 'Docker'],
+      duration: 'July 2025 - June 2026',
+      description: [
+        'Built a containerized, cloud-ready Spring Boot + React + Flask microservices platform with MongoDB-backed persistence, handling 50 concurrent users at <200ms API response times.',
+        'Integrated AI transcription pipeline (Whisper + Mistral 7B) via async, event-driven inter-service APIs, processing 60-minute audio in <7 minutes.'
+      ],
+      repository: 'https://github.com/ommagdum/academic-meeting-minutes',
+      liveDemo: ''
+    },
+    {
+      title: 'Event Ticket Platform',
+      tech: ['Keycloak', 'OAuth2', 'OIDC', 'PostgreSQL', 'Docker'],
+      duration: 'Nov 2025 - Dec 2025',
+      description: [
+        'Secured user flows with Keycloak (OAuth2/OIDC) and custom Servlet Filters syncing identities to PostgreSQL, mirroring enterprise-grade customer identity management patterns.',
+        'Dockerized the backend, Keycloak, and Adminer via Compose for consistent, reproducible environments across deployments.'
+      ],
+      repository: 'https://github.com/ommagdum/tickets',
+      liveDemo: ''
+    },
+    {
       title: 'ML-Based Spam Email Detection Web App',
-      tech: ['Spring Boot', 'React', 'Python', 'PostgreSQL', 'JWT', 'OAuth2', 'Tailwind CSS', 'Flask', 'Naive Bayes', 'TF-IDF'],
+      tech: ['Spring Boot', 'Flask', 'Python', 'TF-IDF', 'Naive Bayes'],
       duration: 'Jan 2025 - May 2025',
-      description: 'Built a full-stack microservices application for real-time spam email detection with feedback-based model retraining and versioning.',
+      description: [
+        'Architected a distributed full-stack application bridging a Spring Boot backend with a Python Flask service via asynchronous inter-service APIs to classify incoming email payloads.',
+        'Deployed a TF-IDF + Naive Bayes model with live retraining, versioning, and rollback via dedicated REST endpoints.'
+      ],
       repository: 'https://github.com/ommagdum/intelligent-spam-detection',
-      liveDemo: 'https://webapp-frontend-qawu.onrender.com/'
-    },
-    {
-      title: 'Loan Default Prediction',
-      tech: ['Python', 'Jupyter', 'XGBoost'],
-      duration: 'Jun 2024 - Jul 2024',
-      description: 'Developed an XGBoost model to predict loan defaults with a 0.7595 ROC score using preprocessing, tuning, and evaluation.',
-      repository: 'https://github.com/ommagdum/Loan-Default-Prediction',
-      liveDemo: 'https://github.com/ommagdum/Loan-Default-Prediction'
-    },
-    {
-      title: 'SpaceX Falcon 9 Landing Prediction',
-      tech: ['Python', 'Jupyter', 'XGBoost'],
-      duration: 'Jun 2024',
-      description: 'Created ML models to predict SpaceX Falcon 9 landing outcomes to support startup bidding strategies.',
-      repository: 'https://github.com/ommagdum/Applied-Data-Science-Capstone-IBM',
-      liveDemo: 'https://github.com/ommagdum/Applied-Data-Science-Capstone-IBM'
+      liveDemo: ''
     }
   ];
 

@@ -1,0 +1,133 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%-------------------------------------------
+\begin{document}
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Om Magdum} \\ \vspace{1pt}
+    \small Kolhapur, Maharashtra $|$ +91-7249797177 $|$ \href{mailto:magdumom.ml@gmail.com}{\underline{magdumom.ml@gmail.com}} $|$ 
+    \href{https://github.com/ommagdum}{\underline{GitHub}} $|$
+    \href{https://www.linkedin.com/in/om-ml-engg/}{\underline{LinkedIn}}
+\end{center}
+%-----------SUMMARY-----------
+\section{Professional Summary}
+\small{Final-year Computer Science graduate with hands-on experience in Java/Spring Boot microservices, event-driven systems, and full-stack development. Quick learner with a collaborative mindset, eager to contribute to enterprise-scale software engineering in a structured team environment. Skilled in PostgreSQL, Kafka, Docker, React, and OAuth2 --- AWS certified.}
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java (17/21), Python 3.12, TypeScript, JavaScript (ES6+), SQL} \\
+     \textbf{Backend}{: Spring Boot 3, Spring Security, Spring Data JPA, Spring Cloud, Apache Kafka} \\
+     \textbf{Frontend}{: React 18, HTML5, CSS3, Tailwind CSS, Vite} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, Redis, MySQL} \\
+     \textbf{Cloud}{: AWS (Academy Cloud Foundations Certified)} \\
+     \textbf{Security \& Architecture}{: Microservices, REST, OAuth2, OIDC, JWT, Keycloak, WebSockets (STOMP)} \\
+     \textbf{Design Patterns}{: MVC, Repository, Factory, Event-Driven Architecture} \\
+     \textbf{DevOps \& Testing}{: Docker, Maven, Git, JUnit 5, Mockito, JaCoCo, JMeter, ShedLock, Bucket4j, Resilience4j} \\
+    }}
+ \end{itemize}
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineering Intern (Part-time)}{Feb, 2026 -- May, 2026}
+      {Vinayak IT Solutions}{Kolhapur, Maharashtra}
+      \resumeItemListStart
+        \resumeItem{Designed a multi-datasource PostgreSQL setup to isolate audit logs from core banking data, supporting high-reliability data pipelines and reducing query latency on transaction-heavy endpoints.}
+        \resumeItem{Prevented database exhaustion on production REST APIs by implementing Bucket4j rate limiting (100 req/min), blocking 100\% of DDoS traffic.}
+        \resumeItem{Prevented double-charges in a distributed banking environment by eliminating race conditions across concurrent scheduled triggers using Spring Boot 3 and ShedLock.}
+        \resumeItem{Cut debugging time by 40\% and caught 7 critical pre-deployment bugs by bringing JaCoCo test coverage to 85\% via JUnit 5 and Mockito; collaborated with senior engineers on code reviews and technical documentation.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{MeetingMinutes AI $|$ Mega Project} $|$ \href{https://github.com/ommagdum/academic-meeting-minutes}{\underline{GitHub}}}{July, 2025 -- June, 2026}
+          \resumeItemListStart
+            \resumeItem{Built a containerized, cloud-ready Spring Boot + React + Flask microservices platform with MongoDB-backed persistence, handling 50 concurrent users at $<$200ms API response times.}
+            \resumeItem{Integrated AI transcription pipeline (Whisper + Mistral 7B) via async, event-driven inter-service APIs, processing 60-minute audio in $<$7 minutes.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Event Ticket Platform} $|$ \href{https://github.com/ommagdum/tickets}{\underline{GitHub}}}{Nov 2025 -- Dec 2025}
+          \resumeItemListStart
+            \resumeItem{Secured user flows with Keycloak (OAuth2/OIDC) and custom Servlet Filters syncing identities to PostgreSQL, mirroring enterprise-grade customer identity management patterns.}
+            \resumeItem{Dockerized the backend, Keycloak, and Adminer via Compose for consistent, reproducible environments across deployments.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{ML-Based Spam Email Detection Web App} $|$ \href{https://github.com/ommagdum/intelligent-spam-detection}{\underline{GitHub}}}{Jan 2025 -- May 2025}
+          \resumeItemListStart
+            \resumeItem{Architected a distributed full-stack application bridging a Spring Boot backend with a Python Flask service via asynchronous inter-service APIs to classify incoming email payloads.}
+            \resumeItem{Deployed a TF-IDF + Naive Bayes model with live retraining, versioning, and rollback via dedicated REST endpoints.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tatyasaheb Kore Institute of Engineering \& Technology}{Warananagar, Maharashtra}
+      {Bachelor of Technology in Computer Science and Engineering --- CGPA: 7.55}{Oct 2022 -- June 2026}
+  \resumeSubHeadingListEnd
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{AWS Academy Graduate --- Cloud Foundations} $|$ \href{https://www.credly.com/badges/6537fbfe-992b-4708-b442-c3e197cf2af0/public_url}{\underline{\emph{Amazon Web Services}}} \hfill Nov 2025 \\
+      \textbf{Java Spring Framework 6 with Spring Boot 3} $|$ \href{https://www.udemy.com/certificate/UC-d846a318-218c-4b7d-8bee-7e0fbcb08073/}{\underline{\emph{Udemy}}} \hfill Mar 2025
+    }}
+  \end{itemize}
+\end{document}

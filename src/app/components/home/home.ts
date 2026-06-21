@@ -8,13 +8,15 @@ import { Education } from "../education/education";
 import { Certifications } from "../certifications/certifications";
 import { Contact } from "../contact/contact";
 import { Footer } from "../footer/footer";
+import { Experience } from "../experience/experience";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, Hero, Projects, Skills, Education, Certifications, Contact, Footer],
+  imports: [CommonModule, RouterModule, Hero, Experience, Projects, Skills, Education, Certifications, Contact, Footer],
   template: `
     <app-hero></app-hero>
+    <app-experience></app-experience>
     <app-projects></app-projects>
     <app-skills></app-skills>
     <app-education></app-education>

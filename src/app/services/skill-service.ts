@@ -10,48 +10,28 @@ export class SkillService {
 
   private readonly skills: SkillCategory[] = [
     {
-      name: 'Programming Languages',
-      skills: ['Java', 'Python', 'SQL']
+      name: 'Languages',
+      skills: ['Java (17/21)', 'Python 3.12', 'TypeScript', 'JavaScript (ES6+)', 'SQL']
     },
     {
-      name: 'Tools',
-      skills: ['Docker', 'Maven', 'Jupyter Notebooks']
+      name: 'Backend',
+      skills: ['Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'Spring Cloud', 'Apache Kafka']
     },
     {
-      name: 'Web Technologies',
-      skills: ['REST APIs', 'JWT', 'OAuth2', 'Microservices']
+      name: 'Frontend',
+      skills: ['React 18', 'HTML5', 'CSS3', 'Tailwind CSS', 'Vite']
     },
     {
-      name: 'Machine Learning',
-      skills: [
-        'Supervised Learning', 
-        'Unsupervised Learning', 
-        'Classification', 
-        'Recommender Systems', 
-        'Linear Regression'
-      ]
-    },{
-      name: 'Data Science',
-      skills: [
-        'EDA',
-        'Data Cleaning',
-        'Preprocessing',
-        'Visualization',
-        'CRISP-DM'
-      ]
+      name: 'Databases & Cloud',
+      skills: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'AWS']
     },
     {
-      name: 'Frameworks & Libraries',
-      skills: [
-        'Spring Boot', 
-        'Spring Framework', 
-        'Flask', 
-        'PostgreSQL', 
-        'TensorFlow', 
-        'XGBoost', 
-        'Pandas', 
-        'NumPy'
-      ]
+      name: 'Security & Architecture',
+      skills: ['Microservices', 'REST', 'OAuth2', 'OIDC', 'JWT', 'Keycloak', 'WebSockets (STOMP)']
+    },
+    {
+      name: 'DevOps & Testing',
+      skills: ['Docker', 'Maven', 'Git', 'JUnit 5', 'Mockito', 'JaCoCo', 'JMeter', 'ShedLock', 'Bucket4j', 'Resilience4j']
     }
   ];
 

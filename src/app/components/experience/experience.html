@@ -1,0 +1,40 @@
+<section id="experience" class="py-16 px-6 bg-[var(--color-background)]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+            <span class="text-[var(--color-primary)]">
+                Work Experience
+            </span>
+        </h2>
+
+        <div class="max-w-4xl mx-auto">
+            @for (exp of experiences; track exp.title) {
+                <div class="group border border-[var(--color-border)] bg-[var(--color-surface)] rounded flex flex-col mb-8 p-6 transition-colors hover:border-gray-300">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-2xl font-bold text-[var(--color-primary)] tracking-tight">{{ exp.title }}</h3>
+                        <div class="text-[var(--color-secondary)] font-medium mt-2 md:mt-0">{{ exp.duration }}</div>
+                    </div>
+
+                    <div class="flex items-center text-[var(--color-accent)] font-medium mb-4 text-lg">
+                        <span>{{ exp.company }}</span>
+                        <span class="mx-2 opacity-50">•</span>
+                        <span class="text-sm opacity-80 text-[var(--color-secondary)]">{{ exp.location }}</span>
+                    </div>
+
+                    <ul class="list-disc list-outside ml-5 text-[var(--color-primary)] mb-6 space-y-2 leading-relaxed">
+                        @for (bullet of exp.description; track bullet) {
+                            <li>{{ bullet }}</li>
+                        }
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2">
+                        @for (tech of exp.tech; track tech) {
+                            <span class="px-3 py-1 text-xs border border-[var(--color-border)] bg-white text-[var(--color-primary)] rounded font-mono">
+                                {{ tech }}
+                            </span>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

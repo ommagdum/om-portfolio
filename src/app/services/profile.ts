@@ -11,7 +11,7 @@ export class ProfileService {
     location: 'Kolhapur, Maharashtra',
     email: 'magdumom.ml@gmail.com',
     phone: '+91-7249797177',
-    summary: 'Full-stack developer & ML engineer building scalable web applications and ML pipelines.',
+    summary: 'Java Backend Developer · Spring Boot, Kafka & Microservices · Fintech Systems · Open to Remote',
     linkedin: 'https://www.linkedin.com/in/om-ml-engg/',
     github: 'https://github.com/ommagdum'
   }

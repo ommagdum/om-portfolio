@@ -17,6 +17,7 @@ export class Navigation {
 
   navItems: NavItem[] = [
     {text: 'About', id: 'about'},
+    {text: 'Experience', id: 'experience'},
     {text: 'Projects', id: 'projects'},
     { text: 'Skills', id: 'skills' },
     { text: 'Education', id: 'education' },
