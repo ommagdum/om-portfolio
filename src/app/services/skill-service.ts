@@ -15,7 +15,7 @@ export class SkillService {
     },
     {
       name: 'Backend',
-      skills: ['Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'Spring Cloud', 'Apache Kafka']
+      skills: ['Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'Spring Cloud', 'Spring Cloud Gateway', 'Spring Cloud Config', 'Spring Cloud Stream', 'Spring Cloud Functions', 'Apache Kafka', 'RabbitMQ']
     },
     {
       name: 'Frontend',
@@ -27,11 +27,11 @@ export class SkillService {
     },
     {
       name: 'Security & Architecture',
-      skills: ['Microservices', 'REST', 'OAuth2', 'OIDC', 'JWT', 'Keycloak', 'WebSockets (STOMP)']
+      skills: ['Microservices', 'Cloud Native Apps', 'Service Discovery', 'REST', 'OAuth2', 'OIDC', 'JWT', 'Keycloak', 'WebSockets (STOMP)', 'Open API', 'Swagger']
     },
     {
       name: 'DevOps & Testing',
-      skills: ['Docker', 'Maven', 'Git', 'JUnit 5', 'Mockito', 'JaCoCo', 'JMeter', 'ShedLock', 'Bucket4j', 'Resilience4j']
+      skills: ['Docker', 'Docker Compose', 'Kubernetes', 'Helm', 'Prometheus', 'Loki', 'Promtail', 'Tempo', 'Grafana', 'Maven', 'Git', 'JUnit 5', 'Mockito', 'JaCoCo', 'JMeter', 'ShedLock', 'Bucket4j', 'Resilience4j']
     }
   ];
 

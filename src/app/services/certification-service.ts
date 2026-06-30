@@ -9,6 +9,12 @@ export class CertificationService {
   constructor() { }
 
   private readonly certifications: Certification[] = [{
+    title: 'Master Microservices with SpringBoot,Docker,Kubernetes',
+    provider: 'Udemy',
+    date: 'Jul 2026',
+    url: 'https://www.udemy.com/certificate/UC-78717f5a-0ac1-444b-a502-cbc184868028/',
+    icon: 'award'
+  }, {
     title: 'AWS Academy Graduate — Cloud Foundations',
     provider: 'Amazon Web Services',
     date: 'Nov 2025',
